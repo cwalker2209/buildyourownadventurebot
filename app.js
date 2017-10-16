@@ -137,7 +137,7 @@ function fLeft(req, res){
   var twiml = new twilio.twiml.MessagingResponse();
   if(sAction.toLowerCase().search("look") != -1){
     twiml.message("You look into the mirror and see a bloody face. You run screaming back into the hallway. You should go RIGHT.");
-    oConnections[sFrom].fCurState = fRight;
+    oConnections[sFrom].fCurState = fUpStairs;
   }else if(sAction.toLowerCase().search("leave") != -1){
     twiml.message("You see two doors on the second floor. Do you enter the LEFT or RIGHT?");
     oConnections[sFrom].fCurState = fUpStairs;
